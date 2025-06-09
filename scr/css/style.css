@@ -25,14 +25,14 @@ body{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom:32px;
+    margin-bottom:8px;
 }
 .container .categorias-cartas, .container .preco-cartas{
     display:flex;
     flex-direction:column;
     width:40%;
 }
-.container label{
+.container label, .container .selecoes{
     letter-spacing:2px;
     font-weight: 500;
     color: #6528D3;
@@ -74,6 +74,14 @@ body{
 }
 .container .filtros .btn-filtrar:hover{
     background-color: #33008F;
+}
+/*Filtros selecionados*/
+.container .selecoes{
+    background-color: cyan;
+    display: flex;
+    justify-content: flex-start;
+    gap:32px;
+    margin-bottom:32px;
 }
 
 /*Cartas*/
@@ -149,4 +157,3 @@ body{
 .mostrar{
     display:mostrar;
 }
-/*Tornar responsivo!*/

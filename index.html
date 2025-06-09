@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/SemanaDoZero_MagikIA/scr/css/reset.css">
-    <link rel="stylesheet" href="/SemanaDoZero_MagikIA/scr/css/style.css">
-    <link rel="stylesheet" href="/SemanaDoZero_MagikIA/scr/css/responsivo.css"
+    <link rel="stylesheet" href="scr/css/reset.css">
+    <link rel="stylesheet" href="scr/css/style.css">
+    <link rel="stylesheet" href="scr/css/responsivo.css"
 </head>
 <body>
     <header class="cabecalho">
-        <img src="/SemanaDoZero_MagikIA/scr/images/logo.png" alt="logo MagikIA">
+        <img src="scr/images/logo.png" alt="logo MagikIA">
         
     </header>
     <main class="container">
@@ -33,8 +33,13 @@
             </div>
             <button class="btn-filtrar">Aplicar Filtros</button>
         </div>
+        <div class="selecoes">
+            <p class="selecoes-categoria" id="selecoes-categoria">Categoria:</p>
+            <p class="selecoes-preco" id="selecoes-categoria">Preço:</p>
+        </div>
         <ul class="cartas"><!--'data-algo' "data: dados", um dado do item, informação útil em javastript (element.dataset)-->
-            <li class="carta" data-categoria="epica" data-preco="3000"><img src="/SemanaDoZero_MagikIA/scr/images/carta-arkanon.png" alt="">
+            <li class="carta" data-categoria="epica" data-preco="3000">
+                <img src="scr/images/*carta-arkanon.png" alt="Carta Arkanon" />
             <div class="informacoes">
                 <h2 class="nome-personagem">Arkanon</h2>
                 <span class="categoria">Categoria: Épica</span>
@@ -43,7 +48,7 @@
             </div>
             </li>
             <li class="carta" data-categoria="epica" data-preco="4000">
-                    <img src="/SemanaDoZero_MagikIA/scr/images/carta-lymara.png" alt="Carta Lymara" />
+                    <img src="scr/images/*carta-lymara.png" alt="Carta Lymara" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Lymara</h2>
                         <span class="categoria">Categoria: Épica</span>
@@ -52,7 +57,7 @@
                     </div>
                 </li>
                 <li class="carta" data-categoria="comum" data-preco="800">
-                    <img src="/SemanaDoZero_MagikIA/scr/images/carta-kaelthar.png" alt="Carta Kaelthar" />
+                    <img src="scr/images/*carta-kaelthar.png" alt="Carta Kaelthar" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Kaelthar</h2>
                         <span class="categoria">Categoria: Comum</span>
@@ -61,7 +66,7 @@
                     </div>
                 </li>
                 <li class="carta" data-categoria="rara" data-preco="1500">
-                    <img src="/SemanaDoZero_MagikIA/scr/images/carta-maldrik.png" alt="Carta Maldrik" />
+                    <img src="scr/images/*carta-maldrik.png" alt="Carta Maldrik" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Maldrik</h2>
                         <span class="categoria">Categoria: Rara</span>
@@ -70,7 +75,7 @@
                     </div>
                 </li>
                 <li class="carta" data-categoria="comum" data-preco="600">
-                    <img src="/SemanaDoZero_MagikIA/scr/images/carta-drahven.png" alt="Carta Drahven" />
+                    <img src="scr/images/*carta-drahven.png" alt="Carta Drahven" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Drahven</h2>
                         <span class="categoria">Categoria: Comum</span>
@@ -79,7 +84,7 @@
                     </div>
                 </li>
                 <li class="carta" data-categoria="comum" data-preco="400">
-                    <img src="/SemanaDoZero_MagikIA/scr/images/carta-nyxsombra.png" alt="Carta Nyxsombra" />
+                    <img src="scr/images/*carta-nyxsombra.png" alt="Carta Nyxsombra" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Nyxsombra</h2>
                         <span class="categoria">Categoria: Comum</span>
@@ -90,6 +95,6 @@
         </ul>
     </main>
     <footer class="rodape">@2025 - Todos os direitos reservados</footer>
-    <script src="/SemanaDoZero_MagikIA/scr/js/index.js"></script>
+    <script src="scr/js/index.js"></script>
 </body>
 </html>

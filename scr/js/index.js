@@ -15,7 +15,8 @@ botaoFiltrar.addEventListener('click', function(){
     //passo 3 - pegar os valores dos campos de categoria e preço
     const categoriaSelecionada = document.querySelector('#categoria').value;
     const precoMaximoSelecionado = document.querySelector('#preco').value;
-
+    const temFiltroCategoria = categoriaSelecionada !== '';
+    const temFiltroPreco = precoMaximoSelecionado !== '';
     //passo 4 - para cada carta, verificar se ela deve ser mostrada ou escondida 
     const cartas = document.querySelectorAll('.carta'); //Cria uma lista
 
@@ -24,7 +25,6 @@ botaoFiltrar.addEventListener('click', function(){
         const precoCarta = carta.dataset.preco;
         let mostrarCarta = true;
         //Categoria
-        const temFiltroCategoria = categoriaSelecionada !== '';
         const cartaNaoBateComFiltroDeCategoria = categoriaSelecionada !== categoriaCarta;
 
         if(temFiltroCategoria && cartaNaoBateComFiltroDeCategoria){
@@ -32,7 +32,6 @@ botaoFiltrar.addEventListener('click', function(){
         };
 
         //Preço
-        const temFiltroPreco = precoMaximoSelecionado !== '';
         const precoCartaAcimaDoPrecoMaximo = parseFloat(precoCarta) > parseFloat(precoMaximoSelecionado);
 
         if(temFiltroPreco && precoCartaAcimaDoPrecoMaximo){
@@ -41,11 +40,14 @@ botaoFiltrar.addEventListener('click', function(){
 
         //Mostrar ou Esconder
         if(mostrarCarta){
-            carta.classList.add('mostrar');
             carta.classList.remove('esconder');
         } else {
-            carta.classList.remove('mostrar');
             carta.classList.add('esconder');
         };
     });
+    //Pegar os elementos que mostram a seleção
+    const displayCategoriaSelecionada = document.querySelector('#selecoes-categoria');
+    console.log(displayCategoriaSelecionada);
+    const displayPrecoSelecionado = document.querySelector('#selecoes-preco');
+    console.log(displayPrecoSelecionado);
 });
