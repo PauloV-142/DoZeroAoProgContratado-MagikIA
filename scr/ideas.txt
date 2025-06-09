@@ -1,0 +1,16 @@
+#Colocar uma maneira do usuário adicionar suas próprias cartas, com imagem, preço, nome e descrição. Talvez elas sejam salvas no computador(database local) em uma pasta: "cartas customizadas". Talvez um gerador de cartas integrado ao próprio site??
+#para adcionar as próprias cartas:
+(Estar logado na conta) Fazer upload de uma imagem do personagem, [o layout da carta será gerado pelo próprio javascript (Uma biblioteca de manipulação de imagens talvez?), adicionando textos ao layout padrão da carta. Tudo isso de maneira interativa.] Nome da carta, tipos, efeito/habilidade, "frase de efeito", cor para a carta, autoria e preço (sugerido[pela força e nível -Sei lá, não jogo rpg-] ou customizado).
+
+#Login, e cadastro com username, email e senha do site. Será enviado um código no email para verificação, e troca de senha se necessário. Os dados da conta devem ser guardados de forma criptografada (MB).
+
+
+#   #   #   #   #   #   #   #
+Usar IA para buscar Vagas!
+Palavras:
+SER FOCO EM PROGRAMADOR
+# https://mapadev.replit.app/
+
+Perguntar para a IA: vale a pena criar todos esses arquivos e especificações? Não são coisas inúteis que só utilizam o armazenamento da máquina? Ou realmente vale a pena para ter um projeto organizado e se destacar dentre os outros programadores?
+
+#Extensão: responsive viewer
