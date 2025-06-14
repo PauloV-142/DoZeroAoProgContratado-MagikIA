@@ -4,7 +4,9 @@
         passo 1 - pegar o botao de aplicar filtros  do HTML e mandar pro JS
         passo 2 - escutar o clique no botão de aplicar filtros
         passo 3 - pegar os valores dos campos de categoria e preço
-        passo 4 - para cada carta, verificar se ela deve ser mostrada ou escondida 
+        passo 4 - modificar os parágrafos de classe seleções para mostrar a categoria e preço
+        passo 5 - para cada carta, verificar se ela deve ser mostrada ou escondida
+        passo 6 - mostrar o número de cartas selecionadas
 */
 
 //passo 1 - pegar o botao de aplicar filtros  do HTML e mandar pro JS*/
@@ -17,8 +19,14 @@ botaoFiltrar.addEventListener('click', function(){
     const precoMaximoSelecionado = document.querySelector('#preco').value;
     const temFiltroCategoria = categoriaSelecionada !== '';
     const temFiltroPreco = precoMaximoSelecionado !== '';
-    //passo 4 - para cada carta, verificar se ela deve ser mostrada ou escondida 
+
+    //passo 4 - modificar os parágrafos de classe seleções para mostrar a categoria e preço
+    document.getElementById('selecoes-categoria').innerHTML = `Categoria: <font color="black">${categoriaSelecionada !== "" ? categoriaSelecionada : "Todas"}</font>`;
+    document.getElementById('selecoes-preco').innerHTML = `Preço máximo: <font color="black">${precoMaximoSelecionado !== "" ? "R$"+precoMaximoSelecionado : "\u221E"}</font>`;
+
+    //passo 5 - para cada carta, verificar se ela deve ser mostrada ou escondida 
     const cartas = document.querySelectorAll('.carta'); //Cria uma lista
+    let numeroDeCartasSelecionadas = 0;
 
     cartas.forEach(function(carta){
         const categoriaCarta = carta.dataset.categoria;
@@ -40,14 +48,23 @@ botaoFiltrar.addEventListener('click', function(){
 
         //Mostrar ou Esconder
         if(mostrarCarta){
+            numeroDeCartasSelecionadas += 1;
             carta.classList.remove('esconder');
         } else {
             carta.classList.add('esconder');
-        };
+        }
     });
-    //Pegar os elementos que mostram a seleção
-    const displayCategoriaSelecionada = document.querySelector('#selecoes-categoria');
-    console.log(displayCategoriaSelecionada);
-    const displayPrecoSelecionado = document.querySelector('#selecoes-preco');
-    console.log(displayPrecoSelecionado);
+    
+    //passo 6 - mostrar o número de cartas selecionadas
+    document.querySelector('#selecoes-cartas').innerHTML = `Cartas: <font color="black">${numeroDeCartasSelecionadas}</font>`;//Alternativa ao getElementByID()
 });
+
+/*
+  O que precisamos fazer? - Alterar entre os modos escuro e claro com um clique de um botão.
+    OBJETIVO 1 - Criar a funcionalidade de filtrar as cartas
+        passo 1 - pegar o botao de aplicar filtros  do HTML e mandar pro JS
+        passo 2 - escutar o clique no botão de aplicar filtros
+        passo 3 - pegar os valores dos campos de categoria e preço
+        passo 4 - modificar os parágrafos de classe seleções para mostrar a categoria e preço
+        passo 5 - para cada carta, verificar se ela deve ser mostrada ou escondida 
+*/

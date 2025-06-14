@@ -17,13 +17,19 @@
     }
 
     .container .filtros .categorias-cartas, .container .filtros .preco-cartas, 
-    .container .filtros .btn-filtrar
+    .container .filtros .btn-filtrar, .container .selecoes
     {
         width: 65%;
     }
-    
+
     .container .filtros .btn-filtrar{
         align-self: center;
+
+    }
+
+    .container .selecoes{
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .container .cartas {
@@ -34,8 +40,14 @@
 @media(max-width: 480px){
     .container .filtros .categorias-cartas,
     .container .filtros .preco-cartas,
-    .container .filtros .btn-filtrar
+    .container .filtros .btn-filtrar,
+    .container .selecoes
     {
         width: 100%
+    }
+
+    .container .selecoes{
+        justify-content:space-between;
+        gap: 0;
     }
 }

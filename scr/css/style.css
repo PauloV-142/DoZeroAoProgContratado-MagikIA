@@ -75,11 +75,13 @@ body{
 .container .filtros .btn-filtrar:hover{
     background-color: #33008F;
 }
+
 /*Filtros selecionados*/
-.container .selecoes{
-    background-color: cyan;
+
+.container .selecoes {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap:32px;
     margin-bottom:32px;
 }

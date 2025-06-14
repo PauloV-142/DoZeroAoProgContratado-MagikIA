@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="scr/css/reset.css">
     <link rel="stylesheet" href="scr/css/style.css">
-    <link rel="stylesheet" href="scr/css/responsivo.css"
+    <link rel="stylesheet" href="scr/css/responsivo.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -23,8 +23,8 @@
                 <label for="categoria">Categoria</label>
                 <select class="categoria" id="categoria">
                     <option value="">Todas</option>
-                    <option value="comum">Comum</option>
-                    <option value="epica">Épica</option>
+                    <option value="Comum">Comum</option>
+                    <option value="Épica">Épica</option>
                 </select>
             </div>
             <div class="preco-cartas">
@@ -34,21 +34,26 @@
             <button class="btn-filtrar">Aplicar Filtros</button>
         </div>
         <div class="selecoes">
-            <p class="selecoes-categoria" id="selecoes-categoria">Categoria:</p>
-            <p class="selecoes-preco" id="selecoes-categoria">Preço:</p>
+            <div class="selecoes-filtros">
+                <p id="selecoes-categoria">Categoria:</p>
+                <p id="selecoes-preco">Preço máximo:</p>
+            </div>
+            <div class="selecoes-cartas">
+                <p id="selecoes-cartas">Cartas:</p>
+            </div>
         </div>
         <ul class="cartas"><!--'data-algo' "data: dados", um dado do item, informação útil em javastript (element.dataset)-->
-            <li class="carta" data-categoria="epica" data-preco="3000">
-                <img src="scr/images/*carta-arkanon.png" alt="Carta Arkanon" />
+            <li class="carta" data-categoria="Épica" data-preco="3000">
+                <img src="scr/images/carta-arkanon.png" alt="Carta Arkanon" />
             <div class="informacoes">
                 <h2 class="nome-personagem">Arkanon</h2>
                 <span class="categoria">Categoria: Épica</span>
-                <span class="preco">R$ 3000</span>
+                <span class="preco">R$ 3000,00</span>
                 <button class="btn-comprar">Comprar</button>
             </div>
             </li>
-            <li class="carta" data-categoria="epica" data-preco="4000">
-                    <img src="scr/images/*carta-lymara.png" alt="Carta Lymara" />
+            <li class="carta" data-categoria="Épica" data-preco="4000">
+                    <img src="scr/images/carta-lymara.png" alt="Carta Lymara" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Lymara</h2>
                         <span class="categoria">Categoria: Épica</span>
@@ -56,8 +61,8 @@
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </li>
-                <li class="carta" data-categoria="comum" data-preco="800">
-                    <img src="scr/images/*carta-kaelthar.png" alt="Carta Kaelthar" />
+                <li class="carta" data-categoria="Comum" data-preco="800">
+                    <img src="scr/images/carta-kaelthar.png" alt="Carta Kaelthar" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Kaelthar</h2>
                         <span class="categoria">Categoria: Comum</span>
@@ -66,7 +71,7 @@
                     </div>
                 </li>
                 <li class="carta" data-categoria="rara" data-preco="1500">
-                    <img src="scr/images/*carta-maldrik.png" alt="Carta Maldrik" />
+                    <img src="scr/images/carta-maldrik.png" alt="Carta Maldrik" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Maldrik</h2>
                         <span class="categoria">Categoria: Rara</span>
@@ -74,8 +79,8 @@
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </li>
-                <li class="carta" data-categoria="comum" data-preco="600">
-                    <img src="scr/images/*carta-drahven.png" alt="Carta Drahven" />
+                <li class="carta" data-categoria="Comum" data-preco="600">
+                    <img src="scr/images/carta-drahven.png" alt="Carta Drahven" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Drahven</h2>
                         <span class="categoria">Categoria: Comum</span>
@@ -83,8 +88,8 @@
                         <button class="btn-comprar">Comprar</button>
                     </div>
                 </li>
-                <li class="carta" data-categoria="comum" data-preco="400">
-                    <img src="scr/images/*carta-nyxsombra.png" alt="Carta Nyxsombra" />
+                <li class="carta" data-categoria="Comum" data-preco="400">
+                    <img src="scr/images/carta-nyxsombra.png" alt="Carta Nyxsombra" />
                     <div class="informacoes">
                         <h2 class="nome-personagem">Nyxsombra</h2>
                         <span class="categoria">Categoria: Comum</span>
