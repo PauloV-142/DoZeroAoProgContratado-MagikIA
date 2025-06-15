@@ -1,12 +1,61 @@
-body{
-    font-family:'roboto','sans-serif'
+
+:root {
+    --destaque: #6528D3;
+    --fundo: #FFF;
+    --fundo-input: #F2EEFA;
+    --fundo-cabecalho: #0E0027;
+    --texto: #130234;
 }
+
+/*
+:root {
+    --destaque: #9a48f8;
+    --fundo: #181a1b;
+    --fundo-input: #131313;
+    --texto: #c9c3d3;
+}*/
+
+body{
+    font-family:'roboto','sans-serif';
+    background-color: var(--fundo);
+    transition: background-color 1s;
+}
+
 .cabecalho{
-    background-color:#0E0027;
-    display:flex;
-    justify-content:center;
+    background-color: var(--fundo-cabecalho);
+    display:grid;
+    grid-template-columns: 2fr 1fr 2fr;
     padding:10px;
     margin-bottom:60px;
+}
+
+.cabecalho .centro{
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .direita{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho .direita #alterna-modo{
+    background-color: transparent;
+    border: none;
+    height: 1cm;
+    width: 1cm;
+    background-image: url(/DoZeroAoProgContratado/scr/images/modo-escuro.png);
+    background-size: 100%;
+    cursor: pointer;
+    transition:0.5s;
+}
+
+.cabecalho .direita #alterna-modo:hover{
+    height: 1.1cm;
+    width: 1.1cm;
+    filter: brightness(80%) blur(1px);
+    transition:0.5s;
 }
 
 .container{
@@ -14,7 +63,7 @@ body{
     margin:auto;
 }
 .container .produtos{
-    color:#6528D3;
+    color:var(--destaque);
     font-size:24px;
     font-weight:500;
     margin-bottom:32px;
@@ -35,16 +84,17 @@ body{
 .container label, .container .selecoes{
     letter-spacing:2px;
     font-weight: 500;
-    color: #6528D3;
+    color: var(--destaque);
 }
 
 .container .categorias-cartas select, .container .preco-cartas input{
     padding: 16px/*cima-baixo*/ 13px; /*dois-lados*/
     border-radius:2px;
-    border: 2px solid #6528D3;
-    background-color: #F2EEFA;
-    color: #130234;
+    border: 2px solid var(--destaque);
+    background-color: var(--fundo-input);
+    color: var(--texto);
     height: 52px;
+    transition: background-color 1s;
 }
 
 /*Pseudoclasses*/
@@ -61,8 +111,8 @@ body{
 }
 .container .filtros .btn-filtrar{
     border:none;
-    background-color: #6528D3;
-    color: #EDEDED;
+    background-color: var(--destaque);
+    color: var(--fundo);
     padding: 12px 32px;
     font-weight: 500;
     align-self:end;
@@ -71,9 +121,6 @@ body{
     cursor:pointer;
     letter-spacing: 2px;
     transition: 0.3s;
-}
-.container .filtros .btn-filtrar:hover{
-    background-color: #33008F;
 }
 
 /*Filtros selecionados*/
@@ -86,6 +133,10 @@ body{
     margin-bottom:32px;
 }
 
+.container .selecoes #selecoes-texto{
+    color: var(--texto);
+}
+
 /*Cartas*/
 .container .cartas{ /*<ul class:"cartas"></ul>*/
     display:flex;
@@ -96,10 +147,11 @@ body{
 
 .container .cartas .carta{
     max-width:365px;
-    background-color: #EDEDED;
-    color: #0E0027;
+    background-color: var(--fundo);
+    color: var(--texto);
     border-radius: 20px;
     box-shadow: 0 6px 12px rgb(0,0,0,0.2); /*deslocamento-horizontal: 0, deslocamento-vertical: 6px, desfoque:12px, cor(r:0 G:0 B:0 alfa:.2)*/
+    transition: background-color 1s;
 }
 .container .carta img{
     width:100%;
@@ -109,7 +161,7 @@ body{
     display:flex;
     flex-direction:column;
     gap:10px;
-    background-color: white;
+    background-color: var(--fundo);
     padding:20px;
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
@@ -117,7 +169,7 @@ body{
 .container .carta .informacoes .nome-personagem{
     font-size:24px;
     font-weight:700;
-    color: #111111;
+    color: var(--texto);
 }
 .container .carta .informacoes .categoria {
     color:#7E7E7E;
@@ -130,8 +182,8 @@ body{
     color:#4D8E5C;
 }
 .container .carta .informacoes .btn-comprar{
-    color: #EDEDED;
-    background-color: #6528D3;
+    color: var(--fundo);
+    background-color: var(--destaque);
     padding: 16px;
     border-radius: 4px;
     border:none;
@@ -141,15 +193,17 @@ body{
     text-decoration: none;
     cursor:pointer;
 }
-.container .carta .informacoes .btn-comprar:hover{
-    background-color:#33008F
+
+.container .filtros .btn-filtrar:hover, .carta .informacoes .btn-comprar:hover{
+    background-color: #33008F;
+    color: #c9c3d3;
 }
 
 .rodape{
-    background-color:#6528D3;
+    background-color:var(--destaque);
     display:flex;
     justify-content:center;
-    color:#EDEDED;
+    color:var(--fundo);
     padding:20px;
     margin-top:60px;
 }

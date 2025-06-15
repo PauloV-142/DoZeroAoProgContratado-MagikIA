@@ -13,7 +13,9 @@
 </head>
 <body>
     <header class="cabecalho">
-        <img src="scr/images/logo.png" alt="logo MagikIA">
+        <div class="esquerda"></div>
+        <div class="centro"><img src="scr/images/logo.png" alt="logo MagikIA"></div>
+        <div class="direita"><button id="alterna-modo"></button></div>
         
     </header>
     <main class="container">
@@ -35,11 +37,11 @@
         </div>
         <div class="selecoes">
             <div class="selecoes-filtros">
-                <p id="selecoes-categoria">Categoria:</p>
-                <p id="selecoes-preco">Preço máximo:</p>
+                <p id="selecoes-categoria">Categoria: <font id="selecoes-texto">Todas</font></p>
+                <p id="selecoes-preco">Preço máximo: <font id="selecoes-texto">∞</font></p>
             </div>
             <div class="selecoes-cartas">
-                <p id="selecoes-cartas">Cartas:</p>
+                <p id="selecoes-cartas">Cartas: <font id="selecoes-texto">6</font></p>
             </div>
         </div>
         <ul class="cartas"><!--'data-algo' "data: dados", um dado do item, informação útil em javastript (element.dataset)-->

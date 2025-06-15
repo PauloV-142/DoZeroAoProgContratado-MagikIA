@@ -30,6 +30,11 @@
     .container .selecoes{
         margin-left: auto;
         margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+        gap: 16px;
+        align-items: center;
+
     }
 
     .container .cartas {
@@ -47,7 +52,7 @@
     }
 
     .container .selecoes{
-        justify-content:space-between;
+        grid-template-columns: 1fr;
         gap: 0;
     }
 }
