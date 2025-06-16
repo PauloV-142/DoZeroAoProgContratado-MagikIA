@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MagikIA</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="scr/css/principal.css">
+        <link rel="stylesheet" href="scr/css/reset.css">
+        <link rel="stylesheet" href="scr/css/adicionar.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <div class="esquerda"></div>
+            <div class="centro"><img src="scr/images/logo.png" alt="MagikIA"></div>
+            <div class="direita"><button id="alterna-modo"></button></div>
+        </header>
+        <main class="container">
+            <h1 class="titulo">Adicionar carta</h1>
+            <div class="adicionar">
+                <div class="carta">
+                        <img src="scr/images/carta-arkanon.png" alt="Sua Carta" />
+                    <div class="informacoes">
+                        <h2 class="nome-personagem">Arkanon</h2>
+                        <span class="categoria">Categoria: Épica</span>
+                        <span class="preco">R$ 3000,00</span>
+                        <button class="botao btn-comprar">Comprar</button>
+                    </div>
+                </div>
+            <form action="" class="">
+                    <div class="adicionar-nome coluna">
+                        <label for="nome-personagem">Nome do personagem</label>
+                        <input class="nome-personagem input" id="nome-personagem" type="text">
+                    </div>
+                    <div class="adicionar-categoria coluna">
+                        <label for="categoria">Categoria</label>
+                        <select name="categoria" class="categoria input" id="categoria">
+                            <option value="">Todas</option>
+                            <option value="Comum">Comum</option>
+                            <option value="Épica">Épica</option>
+                        </select>
+                    </div>
+                    <div class="adicionar-preco coluna">
+                        <label for="preco">Preço (R$)</label>
+                        <input class="preco input" id="preco" type="number" value="800">
+                    </div>
+                    <div class="adicionar-imagem coluna">
+                        <label for="imagem-upload">Imagem</label>
+                        <input class="input-file" type="file">
+                    </div>
+            </form>
+        </main>
+        <footer class="rodape"></footer>
+        <script src="scr/js/modoescuro.js"></script>
+        <script>console.log('uai');</script>
+    </body>
+</html>

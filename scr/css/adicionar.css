@@ -1,0 +1,29 @@
+.adicionar{
+
+    display: flex;
+}
+
+form{
+
+    width: 100%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 1% 0px;
+}
+
+.input-file::file-selector-button{
+    border:none;
+    background-color: var(--destaque);
+    color: var(--fundo);
+    transition: 0.3s;
+    letter-spacing: 2px;
+    cursor:pointer;
+    padding:5px
+}
+
+    .input-file::file-selector-button:hover{
+    background-color: #33008F;
+    color: #c9c3d3
+}

@@ -1,4 +1,3 @@
-
 :root {
     --destaque: #6528D3;
     --fundo: #FFF;
@@ -7,13 +6,15 @@
     --texto: #130234;
 }
 
-/*
-:root {
-    --destaque: #9a48f8;
-    --fundo: #181a1b;
-    --fundo-input: #131313;
-    --texto: #c9c3d3;
-}*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
 
 body{
     font-family:'roboto','sans-serif';
@@ -21,6 +22,7 @@ body{
     transition: background-color 1s;
 }
 
+/* Cabeçalho */
 .cabecalho{
     background-color: var(--fundo-cabecalho);
     display:grid;
@@ -29,8 +31,18 @@ body{
     margin-bottom:60px;
 }
 
+.cabecalho .esquerda{
+    /* background-color: #4D8E5C; */
+    display: flex;
+    justify-content: start;
+    padding-left: 15%;
+    padding-right: 15%;
+    align-items: center;
+}
+
 .cabecalho .centro{
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -58,11 +70,12 @@ body{
     transition:0.5s;
 }
 
+/* Container */
 .container{
     max-width: 1170px;
     margin:auto;
 }
-.container .produtos{
+.titulo{
     color:var(--destaque);
     font-size:24px;
     font-weight:500;
@@ -70,24 +83,26 @@ body{
     line-height:32px;
     letter-spacing:2px;
 }
-.container .filtros{
+
+/* Filtros */
+.linha{
     display:flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom:8px;
 }
-.container .categorias-cartas, .container .preco-cartas{
+.coluna{
     display:flex;
     flex-direction:column;
     width:40%;
 }
-.container label, .container .selecoes{
+label, .legenda{
     letter-spacing:2px;
     font-weight: 500;
     color: var(--destaque);
 }
 
-.container .categorias-cartas select, .container .preco-cartas input{
+.input{
     padding: 16px/*cima-baixo*/ 13px; /*dois-lados*/
     border-radius:2px;
     border: 2px solid var(--destaque);
@@ -97,7 +112,6 @@ body{
     transition: background-color 1s;
 }
 
-/*Pseudoclasses*/
 .container Select:focus,/*clicar no elemento*/
 .container input:focus,
 .container select:focus-visible,/*Mais moderno, foco quando selecionado por leitor de tela ou tecla. Ex: Tab*/
@@ -109,18 +123,26 @@ body{
     background: url(/SemanaDoZero_MagikIA/scr/images/seta-para-baixo.png) 97%
     center no-repeat; /*O que isso faz?*/
 }
-.container .filtros .btn-filtrar{
+
+.botao {
     border:none;
     background-color: var(--destaque);
     color: var(--fundo);
+    transition: 0.3s;
+    letter-spacing: 2px;
+    cursor:pointer;
+}
+
+.botao:hover{
+    background-color: #33008F;
+    color: #c9c3d3;
+}
+
+.container .filtros .btn-filtrar{
     padding: 12px 32px;
-    font-weight: 500;
     align-self:end;
     width: 177px;
-    height: 52px;
-    cursor:pointer;
-    letter-spacing: 2px;
-    transition: 0.3s;
+    height: 52px;    
 }
 
 /*Filtros selecionados*/
@@ -145,7 +167,7 @@ body{
     margin-top: 32px;
 }
 
-.container .cartas .carta{
+.carta{
     max-width:365px;
     background-color: var(--fundo);
     color: var(--texto);
@@ -165,6 +187,7 @@ body{
     padding:20px;
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
+    transition: background-color 1s;
 }
 .container .carta .informacoes .nome-personagem{
     font-size:24px;
@@ -181,22 +204,9 @@ body{
     font-weight:700;
     color:#4D8E5C;
 }
-.container .carta .informacoes .btn-comprar{
-    color: var(--fundo);
-    background-color: var(--destaque);
-    padding: 16px;
+.container .carta .informacoes .btn-comprar, #btn-adicionar{
     border-radius: 4px;
-    border:none;
-    letter-spacing: 2px;
-    transition :0.3s;
-    text-align: center;
-    text-decoration: none;
-    cursor:pointer;
-}
-
-.container .filtros .btn-filtrar:hover, .carta .informacoes .btn-comprar:hover{
-    background-color: #33008F;
-    color: #c9c3d3;
+    padding: 16px;
 }
 
 .rodape{

@@ -7,35 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="scr/css/reset.css">
-    <link rel="stylesheet" href="scr/css/style.css">
+    <link rel="stylesheet" href="scr/css/produtos.css">
+    <link rel="stylesheet" href="scr/css/principal.css">
     <link rel="stylesheet" href="scr/css/responsivo.css">
 </head>
 <body>
     <header class="cabecalho">
-        <div class="esquerda"></div>
+        <div class="esquerda"><a href="/DoZeroAoProgContratado/adicionar.html" class="botao" id="btn-adicionar">Adicionar Carta</a></div>
         <div class="centro"><img src="scr/images/logo.png" alt="logo MagikIA"></div>
         <div class="direita"><button id="alterna-modo"></button></div>
         
     </header>
     <main class="container">
-        <h1 class="produtos"><b>Produtos</b></h1>
-        <div class="filtros">
-            <div class="categorias-cartas">
+        <h1 class="titulo"><b>Produtos</b></h1>
+        <div class="filtros linha">
+            <div class="categorias-cartas coluna">
                 <label for="categoria">Categoria</label>
-                <select class="categoria" id="categoria">
+                <select class="categoria input" id="categoria">
                     <option value="">Todas</option>
                     <option value="Comum">Comum</option>
                     <option value="Épica">Épica</option>
                 </select>
             </div>
-            <div class="preco-cartas">
+            <div class="preco-cartas coluna">
                 <label for="preco">Preço máximo (R$)</label>
-                <input type="text" class="preco" id="preco" placeholder="Ex:100">
+                <input type="text" class="preco input" id="preco" placeholder="Ex:100">
             </div>
-            <button class="btn-filtrar">Aplicar Filtros</button>
+            <button class="botao btn-filtrar">Aplicar Filtros</button>
         </div>
-        <div class="selecoes">
+        <div class="selecoes legenda">
             <div class="selecoes-filtros">
                 <p id="selecoes-categoria">Categoria: <font id="selecoes-texto">Todas</font></p>
                 <p id="selecoes-preco">Preço máximo: <font id="selecoes-texto">∞</font></p>
@@ -51,7 +51,7 @@
                 <h2 class="nome-personagem">Arkanon</h2>
                 <span class="categoria">Categoria: Épica</span>
                 <span class="preco">R$ 3000,00</span>
-                <button class="btn-comprar">Comprar</button>
+                <button class="botao btn-comprar">Comprar</button>
             </div>
             </li>
             <li class="carta" data-categoria="Épica" data-preco="4000">
@@ -60,7 +60,7 @@
                         <h2 class="nome-personagem">Lymara</h2>
                         <span class="categoria">Categoria: Épica</span>
                         <span class="preco">R$ 4000,00</span>
-                        <button class="btn-comprar">Comprar</button>
+                        <button class="botao btn-comprar">Comprar</button>
                     </div>
                 </li>
                 <li class="carta" data-categoria="Comum" data-preco="800">
@@ -69,7 +69,7 @@
                         <h2 class="nome-personagem">Kaelthar</h2>
                         <span class="categoria">Categoria: Comum</span>
                         <span class="preco">R$ 800,00</span>
-                        <button class="btn-comprar">Comprar</button>
+                        <button class="botao btn-comprar">Comprar</button>
                     </div>
                 </li>
                 <li class="carta" data-categoria="rara" data-preco="1500">
@@ -78,7 +78,7 @@
                         <h2 class="nome-personagem">Maldrik</h2>
                         <span class="categoria">Categoria: Rara</span>
                         <span class="preco">R$ 1500,00</span>
-                        <button class="btn-comprar">Comprar</button>
+                        <button class="botao btn-comprar">Comprar</button>
                     </div>
                 </li>
                 <li class="carta" data-categoria="Comum" data-preco="600">
@@ -87,7 +87,7 @@
                         <h2 class="nome-personagem">Drahven</h2>
                         <span class="categoria">Categoria: Comum</span>
                         <span class="preco">R$ 600,00</span>
-                        <button class="btn-comprar">Comprar</button>
+                        <button class="botao btn-comprar">Comprar</button>
                     </div>
                 </li>
                 <li class="carta" data-categoria="Comum" data-preco="400">
@@ -96,12 +96,13 @@
                         <h2 class="nome-personagem">Nyxsombra</h2>
                         <span class="categoria">Categoria: Comum</span>
                         <span class="preco">R$ 400,00</span>
-                        <button class="btn-comprar">Comprar</button>
+                        <button class="botao btn-comprar">Comprar</button>
                     </div>
                 </li>
         </ul>
     </main>
     <footer class="rodape">@2025 - Todos os direitos reservados</footer>
-    <script src="scr/js/index.js"></script>
+    <script src="scr/js/filtro.js"></script>
+    <script src="scr/js/modoescuro.js"></script>
 </body>
 </html>
