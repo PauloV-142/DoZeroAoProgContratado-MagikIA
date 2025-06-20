@@ -4,6 +4,7 @@
     --fundo-input: #F2EEFA;
     --fundo-cabecalho: #0E0027;
     --texto: #130234;
+    --transicao: 0.3s;
 }
 
 * {
@@ -19,7 +20,7 @@ ul{
 body{
     font-family:'roboto','sans-serif';
     background-color: var(--fundo);
-    transition: background-color 1s;
+    transition: background-color var(--transicao);
 }
 
 /* Cabeçalho */
@@ -28,7 +29,6 @@ body{
     display:grid;
     grid-template-columns: 2fr 1fr 2fr;
     padding:10px;
-    margin-bottom:60px;
 }
 
 .cabecalho .esquerda{
@@ -73,7 +73,8 @@ body{
 /* Container */
 .container{
     max-width: 1170px;
-    margin:auto;
+    margin: 60px 0px;
+    padding: 0 16px;
 }
 .titulo{
     color:var(--destaque);
@@ -94,8 +95,12 @@ body{
 .coluna{
     display:flex;
     flex-direction:column;
-    width:40%;
 }
+
+.filtros .coluna{
+    width: 40%;
+}
+
 label, .legenda{
     letter-spacing:2px;
     font-weight: 500;
@@ -109,7 +114,7 @@ label, .legenda{
     background-color: var(--fundo-input);
     color: var(--texto);
     height: 52px;
-    transition: background-color 1s;
+    transition: background-color var(--transicao);
 }
 
 .container Select:focus,/*clicar no elemento*/
@@ -165,6 +170,7 @@ label, .legenda{
     flex-wrap:wrap;
     gap:32px; /*Espaço entre os elementos*/
     margin-top: 32px;
+    justify-content: center;
 }
 
 .carta{
@@ -173,7 +179,7 @@ label, .legenda{
     color: var(--texto);
     border-radius: 20px;
     box-shadow: 0 6px 12px rgb(0,0,0,0.2); /*deslocamento-horizontal: 0, deslocamento-vertical: 6px, desfoque:12px, cor(r:0 G:0 B:0 alfa:.2)*/
-    transition: background-color 1s;
+    transition: background-color var(--transicao);
 }
 .container .carta img{
     width:100%;
@@ -187,7 +193,7 @@ label, .legenda{
     padding:20px;
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
-    transition: background-color 1s;
+    transition: background-color var(--transicao);
 }
 .container .carta .informacoes .nome-personagem{
     font-size:24px;
@@ -215,7 +221,6 @@ label, .legenda{
     justify-content:center;
     color:var(--fundo);
     padding:20px;
-    margin-top:60px;
 }
 .esconder{
     display:none;

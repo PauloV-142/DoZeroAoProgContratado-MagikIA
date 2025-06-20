@@ -1,16 +1,25 @@
-.adicionar{
+.exterior{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
 
+.container{
     display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.adicionar{
+    flex: 1;
+    width: auto;
+    display: flex;
+    padding: 5px;
+    gap: 32px;
 }
 
 form{
-
-    width: 100%;
-    margin-left: 5%;
     display: flex;
-    flex-direction: column;
     gap: 16px;
-    padding: 1% 0px;
 }
 
 .input-file::file-selector-button{
@@ -24,6 +33,26 @@ form{
 }
 
     .input-file::file-selector-button:hover{
-    background-color: #33008F;
+    background-color: #3d00ad;
     color: #c9c3d3
+}
+
+.sidebar{
+    min-height: 100%;    
+    width: 100%;
+    right: 0;
+    /* background: repeating-linear-gradient(
+        to left,
+        #f2eefa, #f2eefa 12px,
+        #a18aff 12px, #a18aff 24px,
+        #d8cbff 24px
+    ); */
+    box-shadow: 0 0 32px 0 #8162ff44;
+    color: var(--texto);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    border-left: 2px double var(--destaque);
+    /* position: fixed;
+    align-self: flex-end; */
 }

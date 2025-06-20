@@ -17,6 +17,11 @@
         '--texto': '#130234'
     };
 
+    const botaoModoClaro = {
+        'filter': 'brightness(100%)',
+        'background-image': 'url(./scr/images/modo-escuro.png)',
+    };
+
     const modoEscuro = {
         '--destaque': '#9a48f8',
         '--fundo': '#181a1b',
@@ -25,25 +30,32 @@
         '--texto': '#c9c3d3'
     };
 
+    const botaoModoEscuro = {
+        'filter': 'brightness(70%)',
+        'background-image': 'url(./scr/images/modo-claro.png)',
+    };
+
     let Claro = true;
 
-    function alterarModo(modo){
+    //passo 3 - criar uma função que modifica o css com base no objeto
+    function alterarModo(modo, modoBotao){
         for (let key in modo){
-                document.documentElement.style.setProperty(key, modo[key]);
-                // console.log('alterando...')
-                // console.log(key, modo[key])
+            document.documentElement.style.setProperty(key, modo[key]);
+            // console.log(key, modo[key])
+    }
+        for (let key in modoBotao){
+            botaoAlternarModo.style.setProperty(key, modoBotao[key]);
+            // console.log(key, modoBotao[key])
     }};
 
     botaoAlternarModo.onclick = function(){
         if (Claro){
-            alterarModo(modoEscuro);
-            botaoAlternarModo.style.setProperty('filter','brightness(70%)');
-            botaoAlternarModo.style.setProperty('background-image', 'url(./scr/images/modo-claro.png)')
+            alterarModo(modoEscuro, botaoModoEscuro);
             Claro = false;
         } else {
-            alterarModo(modoClaro);
-            botaoAlternarModo.style.setProperty('filter','brightness(100%)');
-            botaoAlternarModo.style.setProperty('background-image', 'url(./scr/images/modo-escuro.png)')
+            alterarModo(modoClaro, botaoModoClaro);
             Claro = true;
         };
     };
+
+    console.log(window.location.pathname.split('/'))

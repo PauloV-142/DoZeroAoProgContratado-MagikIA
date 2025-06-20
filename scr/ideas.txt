@@ -11,6 +11,12 @@ Palavras:
 SER FOCO EM PROGRAMADOR
 # https://mapadev.replit.app/
 
-Perguntar para a IA: vale a pena criar todos esses arquivos e especificações? Não são coisas inúteis que só utilizam o armazenamento da máquina? Ou realmente vale a pena para ter um projeto organizado e se destacar dentre os outros programadores?
+Perguntar para a IA: vale a pena criar todos esses arquivos e especificações? Não são coisas inúteis que só utilizam o armazenamento da máquina? Ou realmente vale a pena para ter um projeto organizado para se destacar dentre os outros programadores?
 
 #Extensão: responsive viewer
+
+18/06/24
+-Criar uma tela de Bem vindo ao abrir o site com a opção de login ou de ver as cartas disponíveis.
+
+-Na tela de adicionar cartas, colocar uma barra de menu, na lateral direita, com o texto 'suas cartas'; a barra conterá as cartas que a pessoa publicou e o número de de cada uma, o sistema fará isso com uma pasta pra cada usuário, talvez? Ou então um arquivo com textos que indicam as cartas pertencentes a cada usuário, além dos dados de cada uma! OwO (Meio difícil de programar TwT. Gostaria de saber como os sites de vendas gerenciam a parte do dinheiro, pois tem que ser superseguro, o mercado livre possui um banco próprio, algo que seria bem difícil de programar)
+Pensando bem, uma pasta pra cada pessoa é mais fácil e organizado. Ou então arquivos? Porque eu não sei.

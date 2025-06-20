@@ -1,0 +1,17 @@
+form {
+    background-color: rgb(154, 235, 255);
+    padding: 5px;
+}
+
+.adicionar {
+    background-color: pink;
+}
+
+.container{
+    background-color: bisque;
+    
+}
+
+.exterior{
+    background-color: aqua;
+}
