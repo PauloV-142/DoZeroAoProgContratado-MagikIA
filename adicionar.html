@@ -22,34 +22,34 @@
                 <h1 class="titulo">Adicionar carta</h1>
                 <form action="enviar.js" method="POST" class="">
                     <div class="carta">
-                            <img src="scr/images/carta-arkanon.png" alt="Sua Carta" />
+                        <img src="scr/images/carta-arkanon.png" alt="Sua Carta" id="carta-imagem"/>
                         <div class="informacoes">
-                            <h2 class="nome-personagem">Arkanon</h2>
-                            <span class="categoria">Categoria: Épica</span>
-                            <span class="preco">R$ 3000,00</span>
+                            <h2 class="nome-personagem" id="carta-nome">Arkanon</h2>
+                            <span class="categoria" id="carta-categoria">Categoria: Épica</span>
+                            <span class="preco" id="carta-preco">R$ 3000,00</span>
                             <button class="botao btn-comprar">Comprar</button>
                         </div>
                     </div>
                     <div class="adicionar coluna">
                         <div class="adicionar-nome coluna">
-                            <label for="nome-personagem">Nome do personagem</label>
-                            <input class="nome-personagem input" id="nome-personagem" type="text">
+                            <label for="input-nome">Nome do personagem</label>
+                            <input class="nome input" id="input-nome" type="text" oninput="atualizar('input-nome', 'carta-nome')">
                         </div>
                         <div class="adicionar-categoria coluna">
-                            <label for="categoria">Categoria</label>
-                            <select name="categoria" class="categoria input" id="categoria">
+                            <label for="input-categoria">Categoria</label>
+                            <select name="categoria" class="categoria input" id="input-categoria" oninput="atualizar('input-categoria', 'carta-categoria')">
                                 <option value="">Selecione</option>
                                 <option value="Comum">Comum</option>
                                 <option value="Épica">Épica</option>
                             </select>
                         </div>
                         <div class="adicionar-preco coluna">
-                            <label for="preco">Preço (R$)</label>
-                            <input class="preco input" id="preco" type="number" value="800">
+                            <label for="input-preco">Preço (R$)</label>
+                            <input class="preco input" id="input-preco" type="number" value="800" oninput="atualizar('input-preco', 'carta-preco')">
                         </div>
                         <div class="adicionar-imagem coluna">
                             <label for="imagem-upload">Imagem</label>
-                            <input class="input-file" type="file">
+                            <input class="imagem-upload" id="input-imagem" type="file" oninput="atualizarImagem()">
                         </div>
                     </div>
                 </form>
@@ -60,5 +60,6 @@
         </div>
         <footer class="rodape">@2025 - Todos os direitos reservados</footer>
         <script src="scr/js/modoescuro.js"></script>
+        <script src="scr/js/adicionar.js"></script>
     </body>
 </html>

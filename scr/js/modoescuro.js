@@ -57,5 +57,3 @@
             Claro = true;
         };
     };
-
-    console.log(window.location.pathname.split('/'))
